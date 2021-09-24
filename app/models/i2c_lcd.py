@@ -9,3 +9,6 @@ class I2CLcd(Display):
 
     def print(self, content, line):
         self.display.lcd_display_string(content, line + 1)
+
+    def clear(self):
+        self.display.lcd_clear()

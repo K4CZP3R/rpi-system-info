@@ -15,12 +15,13 @@ class App:
     def loop(self):
 
         if self.render is True:
+            self.display.clear()
             self.hardware_modules[self.current_module].update()
             self.display.print(f"{self.hardware_modules[self.current_module]}",0)
             self.display.print(f"{self.hardware_modules[self.current_module].get()}",1)
             self.render = False
 
-        if time() - self.last_change > 2:
+        if time() - self.last_change > 5:
             self.last_change = time()
             self.render = True
             self.current_module += 1

@@ -7,3 +7,6 @@ class Display:
 
     def print(self, content:str, line: int):
         pass
+
+    def clear(self):
+        pass
