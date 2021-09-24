@@ -8,4 +8,4 @@ class I2CLcd(Display):
         self.display = Lcd()
 
     def print(self, content, line):
-        self.display.lcd_display_string(content, line)
+        self.display.lcd_display_string(content, line + 1)

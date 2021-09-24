@@ -15,6 +15,7 @@ class App:
     def loop(self):
 
         if self.render is True:
+            self.hardware_modules[self.current_module].update()
             self.display.print(f"{self.hardware_modules[self.current_module]}",0)
             self.display.print(f"{self.hardware_modules[self.current_module].get()}",1)
             self.render = False
